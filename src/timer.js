@@ -27,6 +27,7 @@
     this.start;
     this.callback = callback;
     this.remaining = this.delay = delay;
+    this.paused = false;
 
     this.resume();
   };
@@ -35,8 +36,11 @@
    * Pause the timer
    */
   Timer.prototype.pause = function() {
-    this.stop();
-    this.remaining -= new Date - this.start;
+    if (!this.paused) {
+      this.stop();
+      this.remaining -= new Date - this.start;
+      this.paused = true;
+    };
 
     // Returns current instance to allow chaining
     return this;
@@ -48,6 +52,7 @@
   Timer.prototype.resume = function() {
     this.start = new Date;
     this._timer = setTimeout(this.callback, this.remaining);
+    this.paused = false;
 
     // Returns current instance to allow chaining
     return this;
