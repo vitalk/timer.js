@@ -8,6 +8,9 @@
     "url": "https://github.com/vitalk/"
   },
   "main": "dist/timer.js",
+  "contibutors": [
+    "Vasili Kauryha (https://github.com/vkovrigo)"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/vitalk/timer.js.git"
