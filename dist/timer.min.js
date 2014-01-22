@@ -1,5 +1,5 @@
 /*!
- * timer.js 0.1.0
+ * timer.js 0.1.1
  * Copyright © 2013-2014 Vital Kudzelka and other contibutors.
  * Licensed under the MIT license http://vitalk.mit-license.org.
  */
